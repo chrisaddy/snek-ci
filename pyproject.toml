@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "snek-ci"
+version = "0.0.1"
+description = "A CI/CD for the rest of us"
+authors = ["chrisaddy <chris.william.addy@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "==3.*,>=3.8.0"
+dagster = "^0.9.11"
+PyYAML = "^5.3.1"
+docker = "^4.3.1"
+
+[tool.poetry.dev-dependencies]
+dephell = "==0.*,>=0.8.3"
+pytest = "==6.*,>=6.1.0"
+Sphinx = "==3.*,>=3.2.1"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0a5"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.dephell.main]
+from = {format = "poetry", path = "pyproject.toml"}
+to = {format = "setuppy", path = "setup.py"}
+versioning = "semver"
