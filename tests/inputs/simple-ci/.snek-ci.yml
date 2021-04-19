@@ -1,0 +1,9 @@
+name: simple-test
+description: super simple
+machine: ubuntu
+source:
+  svc: git
+  host: local
+  location: $HOME/projects/snek-ci/tests/inputs/simple-ci
+build:
+  - test
